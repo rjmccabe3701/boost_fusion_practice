@@ -1,17 +1,4 @@
-#include <boost/fusion/tuple.hpp>
-#include <boost/fusion/view.hpp>
-#include <boost/fusion/algorithm.hpp>
-#include <boost/type_traits.hpp>
-#include <boost/mpl/arg.hpp>
-#include <boost/fusion/view/flatten_view.hpp>
-#include <boost/fusion/include/flatten_view.hpp>
-#include <boost/fusion/support/is_sequence.hpp>
-#include <boost/fusion/sequence/intrinsic/at_c.hpp>
-#include <boost/fusion/include/at_c.hpp>
-#include <boost/fusion/include/begin.hpp>
-#include <type_traits>
-#include <string>
-#include <iostream>
+#include "fusion_includes"
 
 using namespace boost::fusion;
 

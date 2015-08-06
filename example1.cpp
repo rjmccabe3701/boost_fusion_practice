@@ -1,8 +1,4 @@
-#include <boost/fusion/view/iterator_range.hpp>
-#include <boost/fusion/include/iterator_range.hpp>
-#include <boost/fusion/include/vector.hpp>
-#include <boost/fusion/sequence/io/out.hpp>
-#include <iostream>
+#include "fusion_includes.h"
 using namespace boost::fusion;
 int main(void)
 {
