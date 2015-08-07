@@ -13,9 +13,11 @@
 #include <boost/fusion/include/for_each.hpp>
 #include <boost/fusion/include/iterator_range.hpp>
 #include <boost/fusion/include/vector.hpp>
+#include <boost/fusion/include/pair.hpp>
 #include <boost/fusion/include/define_struct.hpp>
 #include <boost/fusion/sequence/io/out.hpp>
 
+#include <boost/fusion/include/make_vector.hpp>
 #if 0
 #include <boost/fusion/include/flatten_view.hpp>
 #endif
