@@ -3,25 +3,12 @@
 using namespace boost::fusion;
 
 
-constexpr std::array<const char*, 3> typeStrings
-{{
-   "FOO_TYPE",
-   "BAR_TYPE",
-   "BAZ_TYPE",
-}};
-
 std::array<std::function<void(int)>, 3> typeFunctions;
 
 struct Base
 {
    int storage;
 };
-
-std::ostream& operator<<(std::ostream& out, Base& b)
-{
-   out << b.storage;
-   return out;
-}
 
 struct Foo: Base{};
 struct Bar: Base{};
@@ -155,45 +142,9 @@ void stringToTypeConversion()
    */
 }
 
-#if 0
-int fun_with_iterators(void)
-{
-   //  using Begin = result_of::begin<TypeVec>::type;
-   //--- found in TypeVec
-   using IterTypeFound = result_of::find<TypeVec, Foo>::type;
-   std::cout << "Type of IterType (Foo) = " << typeid(IterTypeFound).name()
-      << "\n\tdistance = " << result_of::distance<Begin, IterTypeFound>::type::value <<std::endl;
-
-   using DerefTypeFound = std::remove_reference_t<result_of::deref<IterTypeFound>::type>;
-   std::cout << "Type of DerefType (Foo) = " << typeid(DerefTypeFound).name() << std::endl;
-
-   //--- not found in TypeVec
-   using IterTypeNotFound = result_of::find<TypeVec, int>::type;
-   std::cout << "Type of IterType (not found) = " << typeid(IterTypeNotFound).name()
-      << "\n\tdistance = " << result_of::distance<Begin, IterTypeNotFound>::type::value <<std::endl;
-
-   using DerefTypeNotFound = std::remove_reference_t<result_of::deref<IterTypeNotFound>::type>;
-   std::cout << "Type of DerefType (not found) = " << typeid(DerefTypeNotFound).name() << std::endl;
-
-   /* Prints:
-
-      Type of IterType (Foo) = N5boost6fusion15vector_iteratorINS0_6vectorI3Foo3Bar3BazNS0_5void_ES6_S6_S6_S6_S6_S6_EELi0EEE
-      distance = 0
-      Type of DerefType (Foo) = 3Foo
-      Type of IterType (not found) = N5boost6fusion15vector_iteratorINS0_6vectorI3Foo3Bar3BazNS0_5void_ES6_S6_S6_S6_S6_S6_EELi3EEE
-      distance = 3
-      Type of DerefType (not found) = N4mpl_5void_E
-      */
-
-}
-
-#endif
-
 int main(void)
 {
-   // fun_with_iterators();
    stringToTypeConversion();
-
    return 0;
 }
 
