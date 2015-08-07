@@ -18,10 +18,13 @@
 #include <boost/fusion/sequence/io/out.hpp>
 
 #include <boost/fusion/include/make_vector.hpp>
+#include <boost/fusion/include/mpl.hpp>
 #if 0
 #include <boost/fusion/include/flatten_view.hpp>
 #endif
+
 #include <boost/mpl/arg.hpp>
+#include <boost/mpl/transform.hpp>
 
 #include <type_traits>
 #include <string>
@@ -32,4 +35,20 @@
 #include <vector>
 #include <iterator>
 #include <algorithm>
+#include <tuple>
 #include <ostream>
+
+
+
+#include <cxxabi.h>
+template <typename T>
+struct TypeId { };
+
+template<typename T>
+inline std::ostream& operator<<(std::ostream& out, TypeId<T> typeId)
+{
+   int status;
+   auto name = typeid(T).name();
+   out << abi::__cxa_demangle(name, 0,0, & status);
+   return out;
+}
