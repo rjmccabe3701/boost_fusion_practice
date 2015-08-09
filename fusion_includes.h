@@ -7,6 +7,7 @@
 #include <boost/fusion/include/at_c.hpp>
 #include <boost/fusion/include/begin.hpp>
 #include <boost/fusion/include/find.hpp>
+#include <boost/fusion/include/find_if.hpp>
 #include <boost/fusion/include/deref.hpp>
 #include <boost/fusion/include/distance.hpp>
 #include <boost/fusion/include/begin.hpp>
@@ -25,6 +26,7 @@
 
 #include <boost/mpl/arg.hpp>
 #include <boost/mpl/transform.hpp>
+#include <boost/mpl/fold.hpp>
 
 #include <type_traits>
 #include <string>
