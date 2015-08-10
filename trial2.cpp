@@ -250,7 +250,7 @@ int main(void)
 
    std::cout << "Tags: = " << TypeId<decltype(blah)>{} << std::endl;
 
-    getValue<sis_adapt::BlahTag>(blah) = 42;
-    std::cout << getValue<sis_adapt::BlahTag>(blah) << std::endl;
+   getValue<sis_adapt::BlahTag>(blah) = 42;
+   std::cout << getValue<sis_adapt::BlahTag>(blah) << std::endl;
 }
 

@@ -27,6 +27,7 @@
 #include <boost/mpl/arg.hpp>
 #include <boost/mpl/transform.hpp>
 #include <boost/mpl/fold.hpp>
+#include <boost/mpl/contains.hpp>
 
 #include <type_traits>
 #include <string>
