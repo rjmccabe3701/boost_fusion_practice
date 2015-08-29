@@ -18,6 +18,16 @@
 #include <boost/fusion/include/define_struct.hpp>
 #include <boost/fusion/sequence/io/out.hpp>
 
+
+#include <boost/fusion/container/list.hpp>
+#include <boost/fusion/include/list.hpp>
+#include <boost/fusion/container/list/list_fwd.hpp>
+#include <boost/fusion/include/list_fwd.hpp>
+
+
+#include <boost/fusion/container/list/cons.hpp>
+#include <boost/fusion/include/cons.hpp>
+
 #include <boost/fusion/include/make_vector.hpp>
 #include <boost/fusion/include/mpl.hpp>
 #if 0
